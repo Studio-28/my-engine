@@ -1,18 +1,18 @@
 # My Engine
 
-> Minimalist, robust, and magic-free 2D game engine for the browser.
+> Moteur de jeu 2D minimaliste, robuste et sans magie pour le navigateur.
 
-`@kenzoobryan/my-engine` is a JavaScript library designed for developers who want to keep pure control over their game loop. No editor, no heavy dependencies, just the essential bricks to build games like Snake, Tetris, or Shoot'em ups.
+`@kenzoobryan/my-engine` est une bibliothèque JavaScript conçue pour les développeurs qui veulent garder le contrôle pur sur leur boucle de jeu. Pas d'éditeur, pas de dépendances lourdes, juste les briques essentielles pour construire des jeux comme Snake, Tetris ou des Shoot'em ups.
 
 [Français](README.fr.md) | [English](README.md)
 
-## Key Features
+## Fonctionnalités Clés
 
-- **Solid Game Loop**: Managed delta time, death spiral protection.
-- **Scene Management**: Simple transitions between Menu, Game, and Game Over.
-- **2D Canvas Rendering**: Lightweight abstractions for performant drawing.
-- **Unified Input**: Normalized Keyboard and Mouse.
-- **Zero Magic**: No global variables, no unpredictable side-effects.
+- **Game Loop Solide** : Delta time géré, protection contre la spirale de la mort.
+- **Scene Management** : Transitions simples entre Menu, Jeu et Game Over.
+- **Rendu Canvas 2D** : Abstractions légères pour le dessin performant.
+- **Input Unifié** : Clavier et Souris normalisés.
+- **Zero Magic** : Pas de variables globales, pas de side-effects imprévisibles.
 
 ## Installation
 
@@ -20,12 +20,12 @@
 npm install @kenzoobryan/my-engine
 ```
 
-## Quick Start
+## Usage Rapide
 
 ```javascript
 import { Game, Scene, World, System, Component, Vector2 } from '@kenzoobryan/my-engine';
 
-// 1. Define Components
+// 1. Définir des Composants
 class Position extends Component {
     constructor(x, y) { super(); this.vec = new Vector2(x, y); }
 }
@@ -33,7 +33,7 @@ class Velocity extends Component {
     constructor(x, y) { super(); this.vec = new Vector2(x, y); }
 }
 
-// 2. Define Systems
+// 2. Définir des Systèmes
 class PhysicsSystem extends System {
     update(dt) {
         const entities = this.world.getEntitiesWith([Position, Velocity]);
@@ -45,7 +45,7 @@ class PhysicsSystem extends System {
     }
 }
 
-// 3. Create a Scene
+// 3. Créer une Scène
 class MainScene extends Scene {
     onEnter() {
         this.world = new World();
@@ -66,11 +66,11 @@ class MainScene extends Scene {
     }
 
     draw(ctx) {
-        // ... Rendering ...
+        // ... Rendu ...
     }
 }
 
-// 4. Start the game
+// 4. Démarrer le jeu
 const game = new Game({ width: 800, height: 600 });
 game.scene_manager.push(new MainScene());
 game.start();
@@ -78,11 +78,11 @@ game.start();
 
 ## Documentation
 
-- [Vision & Philosophy](docs/en/vision.md): Why this engine?
-- [Architecture](docs/en/architecture.md): How it works under the hood.
-- [API Reference](docs/en/api.md): Classes and methods.
-- [Roadmap](docs/en/roadmap.md): Project future.
+- [Vision & Philosophie](docs/vision.md) : Pourquoi ce moteur ?
+- [Architecture](docs/architecture.md) : Comment ça marche sous le capot ?
+- [API Reference](docs/api.md) : Classes et méthodes.
+- [Roadmap](docs/roadmap.md) : Futur du projet.
 
-## License
+## Licence
 
 MIT © Kenzoobryan

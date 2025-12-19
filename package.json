@@ -1,0 +1,38 @@
+{
+    "name": "@kenzoobryan/my-engine",
+    "version": "0.3.0",
+    "description": "Minimalist 2D Game Engine",
+    "type": "module",
+    "main": "src/index.js",
+    "exports": {
+        ".": "./src/index.js"
+    },
+    "scripts": {
+        "test": "echo \"See test/index_ecs.html for demo\"",
+        "prepublishOnly": "npm test"
+    },
+    "keywords": [
+        "game",
+        "engine",
+        "2d",
+        "canvas",
+        "ecs"
+    ],
+    "author": "Kenzoobryan",
+    "license": "MIT",
+    "files": [
+        "src",
+        "docs",
+        "README.md",
+        "README.fr.md",
+        "LICENSE"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kenzoobryan/my-engine.git"
+    },
+    "bugs": {
+        "url": "https://github.com/kenzoobryan/my-engine/issues"
+    },
+    "homepage": "https://github.com/kenzoobryan/my-engine#readme"
+}

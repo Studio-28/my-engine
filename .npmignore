@@ -1,0 +1,8 @@
+# Dev files
+test/
+.git/
+.gitignore
+
+# System files
+.DS_Store
+Thumbs.db
